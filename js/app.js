@@ -1,5 +1,13 @@
+var url = window.location.href;
+var serloc = '/app-pwa/SW.js';
+
+
 if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/SW.js');
+
+    if (url.includes('localhost')) {
+        serloc = '/SW.js';
+    }
+    navigator.serviceWorker.register(serloc);
 }
 
 
