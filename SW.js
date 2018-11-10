@@ -1,4 +1,4 @@
-importScripts('js/sw-util.js');
+importScripts('/js/sw-util.js');
 
 const static_cache = 'static-v2';
 const dinamic_cache = 'dynamic-v1';
@@ -14,8 +14,8 @@ const app_shell = [
     'img/avatars/spiderman.jpg',
     'img/avatars/thor.jpg',
     'img/avatars/wolverine.jpg',
-    'js/app.js',
-    'js/sw-util.js'
+    '/js/app.js',
+    '/js/sw-util.js'
 
 ];
 
@@ -46,7 +46,7 @@ self.addEventListener('activate', e => {
     const respuesta = caches.keys().then(keys => {
         keys.forEach(element => {
             if (element !== static_cache && element.includes('static')) {
-                return caches.delete(element)
+                return caches.delete(element);
             }
         });
     });
