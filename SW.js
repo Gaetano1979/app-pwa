@@ -6,7 +6,7 @@ const inmutable = 'inmutable-v1';
 
 const app_shell = [
     // '/',
-    '/index.html',
+    // '/index.html',
     // '/css/style.css',
     // 'img/favicon.ico',
     // 'img/avatars/hulk.jpg',
